@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <nav style="display: flex;
+    justify-content: space-evenly;">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="/users" routerLinkActive="active">Users</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+
+  <div class="outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>
