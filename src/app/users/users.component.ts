@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent implements OnInit {
-  userId: number;
-  constructor(private route: ActivatedRoute) { }
+export class UsersComponent {
+  // userId: number;
+  // constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.route.params.subscribe((params: Params) => {
-      this.userId = params.id;
-    });
+  // ngOnInit() {
+  //   this.route.params.subscribe((params: Params) => {
+  //     this.userId = params.id;
+  //   });
 
-  }
+  // }
 
 }

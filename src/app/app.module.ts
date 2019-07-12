@@ -8,15 +8,18 @@ import { UsersComponent } from './users/users.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
-
+import { AuthGuard } from './auth.guard';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'users', component: UsersComponent, children: [
+    path: 'users', component: UsersComponent, canActivateChild: [AuthGuard],
+    children: [
       { path: ':id', component: UserinfoComponent }
     ]
   },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent, canDeactivate: [CanDeactivateGuard] },
+  { path: 'contact-us', redirectTo: 'contact' },
   { path: '**', component: NotfoundComponent }
 ];
 

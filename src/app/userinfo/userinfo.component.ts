@@ -9,11 +9,17 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class UserinfoComponent implements OnInit {
 
   userId: number;
+  userName: string;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.userId = params.id;
     });
+
+    this.route.queryParams.subscribe(
+      (queryparams: Params) => {
+        this.userName = queryparams.name;
+      });
   }
 }

@@ -3,9 +3,9 @@
 <!-- nested nav links -->
 <nav class="nav">
     <!-- where `1` is id -->
-    <a [routerLink]="['/users', 1]">User 1</a>
-    <a [routerLink]="['/users', 2]">User 2</a>
-    <a [routerLink]="['/users', 3]">User 3</a>
+    <a [routerLink]="['/users',1]" [queryParams]='{name:"sai"}'>User 1 </a>
+    <a [routerLink]="['/users', 2]" [queryParams]='{name:"gowtham"}'>User 2</a>
+    <a [routerLink]="['/users', 3]" [queryParams]='{name:"john"}'>User 3</a>
 </nav>
 
 <router-outlet></router-outlet>
